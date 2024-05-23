@@ -6,6 +6,6 @@ module Calculator
   end
 
   def numbers(string)
-    string.split(',').map{|str| str.to_i }
+    string.gsub("\n", ",").split(',').map{|str| str.to_i }
   end
 end
