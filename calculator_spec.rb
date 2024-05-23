@@ -36,5 +36,12 @@ RSpec.describe "Calculator" do
         expect(add("//;\n1;2")).to eq(3)
       end
     end
+
+    context 'negative number will throw an exception' do
+      it "negative numbers not allowed -1, -2" do
+        expect { add("-1, -2, 3") }.to raise_error(RuntimeError, "negative numbers not allowed: -1,-2")
+      end
+    end
+
   end
 end
