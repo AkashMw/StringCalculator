@@ -18,5 +18,11 @@ RSpec.describe "Calculator" do
         expect(add("1, 2")).to eq(3)
       end
     end
+
+    context 'handle any amount of numbers' do
+      it "should return 6 for empty '1, 2, 3'" do
+        expect(add("1, 2, 3")).to eq(6)
+      end
+    end
   end
 end
