@@ -24,5 +24,11 @@ RSpec.describe "Calculator" do
         expect(add("1, 2, 3")).to eq(6)
       end
     end
+
+    context 'handle new lines between numbers' do
+      it "should return 6 for empty '1\n2,3'" do
+        expect(add("1\n2,3")).to eq(6)
+      end
+    end
   end
 end
