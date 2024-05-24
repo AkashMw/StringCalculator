@@ -27,9 +27,12 @@ Example Usage
   require_relative 'calculator'
 
   #Create an instance of the Calculator module
+
   include Calculator
 
   #Add numbers provided as strings
+
   result = add("1,2,3")
+
   puts result  # Output: 6
 
